@@ -16,15 +16,12 @@ body {
 .horni {
   background-color: #f1c40f;
 }
-
 .prvni {
   background-color: #2ecc71;
 }
-
 .druhy {
   background-color: #e74c3c;
 }
-
 .treti {
   background-color: #8e44ad;
 }
@@ -37,24 +34,22 @@ body {
 	- 640px
 	- 1000px
 */
-.kontejner {
-  display: flex;
-  flex-wrap: wrap;
-}
+@media (min-width: 640px) {
+  .kontejner {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-@media screen and (min-width: 640px) {
-
-  .prvni,
-  .druhy {
+  .druhy,
+  .prvni {
     width: 50%;
   }
 }
 
-@media screen and (min-width: 1000px) {
-
+@media (min-width: 1000px) {
   .prvni,
   .druhy,
   .treti {
-    width: 33.33%;
+    width: calc(100% / 3);
   }
 }
